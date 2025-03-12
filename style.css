@@ -1,8 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
+    background-color: lavender;
+}
+
+input::placeholder, textarea::placeholder {
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .container {
@@ -65,7 +69,6 @@ button:hover {
 }
 
 .task-list {
-    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -95,20 +98,28 @@ button:hover {
 }
 
 .task-details {
+    box-sizing: border-box;
     flex-grow: 1;
     margin-left: 10px;
-    max-width: 300px;
-    min-width: 300px;
+    width: 100%;
 }
 
 .task-details p {
     margin: 5px 0;
 }
 
-.task-actions {
+/* .task-actions {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin-bottom: 20px; 
+} */
+
+.task-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
 }
 
 .complete-span {
@@ -146,15 +157,13 @@ button:hover {
 }
 
 
-
-
-
-/* Media Query */
+/* Media Query for screens upto 560px */
 
 @media screen and (max-width: 560px){
     .container {
         width: 100%;
         margin: auto;
+        margin-top: 20px;
     }
 
     #taskForm {
@@ -195,3 +204,94 @@ button:hover {
         margin-top: 5px;
     }
 }
+
+
+/* Media Query for screens from 561 to 1024px */
+
+@media screen and (min-width: 561px) and (max-width: 1024px) {
+    .container {
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    #taskForm {
+        width: 80%;
+        margin: auto;
+    } 
+
+    .task-container {
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+        background-color: #e1dfdf;
+    }
+
+    .task-card {
+        background: #f8f9fa;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        margin: 10px;
+        width: 100%;
+    }
+
+    .task-list {
+        display: flex;
+        width: 100%;
+    }
+
+    .task-details {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .task-actions {
+        display: flex;
+        gap: 20px;
+        margin-right: 20px;
+    }
+} 
+
+
+@media screen and (min-width: 1024.2px) {
+    .container {
+        width: 100%;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    #taskForm {
+        width: 80%;
+        margin: auto;
+    } 
+
+    .task-container {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #ececec;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .task-card {
+        background: #f8f9fa;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 45%;
+    }
+} 
+
+
