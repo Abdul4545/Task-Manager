@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#taskForm {
+    width: 95%;
+}
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+select, button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.task-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.task-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.task-card {
+    background: #f8f9fa;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    width: 90%;
+}
+
+.task-details {
+    flex-grow: 1;
+    margin-left: 10px;
+    max-width: 300px;
+    min-width: 300px;
+}
+
+.task-details p {
+    margin: 5px 0;
+}
+
+.task-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.complete-span {
+  display: flex;
+}
+
+
+
+
+/* -------------------- No need to edit these -------------------- */
+
+.task-actions button {
+    padding: 5px 10px;
+}
+
+.task-actions .delete-btn {
+    background: #dc3545;
+}
+
+.task-actions .delete-btn:hover {
+    background: #b02a37;
+}
+
+.task-actions .edit-btn {
+    background: #ffc107;
+}
+
+.task-actions .edit-btn:hover {
+    background: #d39e00;
+}
+
+.task-card.completed {
+    background: #28a745;
+    color: white;
+}
+
+
+
+/* Media Query */
+
+@media screen and (max-width: 550px){
+    .container {
+        width: 100%;
+        margin: auto;
+    }
+
+    #taskForm {
+        width: 95%;
+        margin: auto;
+    }  
+}

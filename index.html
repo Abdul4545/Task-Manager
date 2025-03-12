@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Task Manager</h2>
+        <form id="taskForm">
+            <input type="hidden" id="editIndex" value="">
+            <div class="form-group">
+                <label for="title">Task Title:</label>
+                <input type="text" name="title" id="title" placeholder="Enter task title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea name="description" id="description" placeholder="Enter task description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="priority">Priority:</label>
+                <select name="priority" id="priority" required>
+                    <option value="">Select Priority</option>
+                    <option value="Less">Less</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="deadline">Deadline for Task:</label>
+                <input type="date" name="deadline" id="deadline" required>
+            </div>
+            <button type="submit">Add Task</button>
+        </form>
+    </div>
+
+    
+    <div class="task-container">
+        <div class="task-list" id="taskList"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
