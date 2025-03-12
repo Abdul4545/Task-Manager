@@ -92,5 +92,3 @@ taskForm.addEventListener("submit", (e) => {
 
 // Initial load
 loadTasks();
-
-// JSON.parse() is a JavaScript method used to convert a JSON string into a JavaScript object.
